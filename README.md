@@ -25,7 +25,7 @@
 
 <p align = "justify">  Dada la importancia del RUNT dentro del día a día de los ciudadanos poseedores de un automotor, plantear un modelo que tenga la capacidad de predecir la cantidad de vehículos registrados en el sistema diariamente traería consigo un impacto positivo para el RUNT y los ciudadanos, esto porque se podrían realizar una planeación bien organizada para ciertas fechas del año donde los registros sean más frecuentas, reducir costos operacionales y hacer más eficiente el sistema de información a través de la predicción.   </p>
 
-#Justificación de las Variables.
+# Justificación de las Variables.
 
 <p align = "justify"> Con el objetivo de encontrar patrones en los datos relacionados con el RUNT se analizó la base de datos "registros_autos_entrenamiento.xlsx" la cual tenía la siguiente composición. </p>
 
