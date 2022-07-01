@@ -41,7 +41,7 @@ En esta solo de dan los datos de la fecha y las unidades. Se entienden las unida
 
 Explicación de las variables Dummies sacadas a partir de la columna Dayweek
 
-Finalmente se elimina Dayweek y la fecha inicial, pues ya se descompuso, para quedar con 12 varibles o columnas.
+Finalmente se elimina Dayweek y la fecha inicial, pues esta ayudo con la creación de las variables día, mes y año y ya no es necesaria, para quedar con 12 varibles o columnas.
 
 
 # Metodologías Utilizadas.
@@ -52,9 +52,21 @@ La función setup lo que hace es iniciar un ambiente de entranamiento y crea un 
 
 ![Image_text](https://github.com/crrojasmazo/TAEComparaci-nModelosRunt/blob/main/2%20TAE.png)
 
-Aunque se puede ver que el modelo sugerido por la tabla es el lightgbm, para el desarrollo del trabajo se escogió el modelo rf osea Random Forest Regressor
+Aunque se puede ver que el modelo sugerido por la tabla es el lightgbm, para el desarrollo del trabajo se escogió el modelo rf osea, Random Forest Regressor, esto por que vimos los parámetros.
 
-teniendo que el modelo se hará con el random forest regressor, se ajustan los parámetros y se escogen los parámetros que mejor ajustan el modelo (mejor basado en métricas)
+* MAE: error absoluto medio, a mayor número es peor el modelo.
+* MSE: error cuadrático medio, a mayor número es peor el modelo.
+* RMSE: raiz del error cuadrático medio, a mayor número peor es el modelo.
+* R2: 0 indica que no sirve, 1 es el modelo perfecto.
+* RMSLE: raiz del error cuadrático logarítmico medio. 
+* MAPE: Error Porcentual Absoluto Medio. Mide el tamaño del error en términos porcentuales.
+
+Nuestro modelo escogido (Random forest) gana el el MAE y en el MAPE, además en los que no gana tiene una diferencia mínima con respecto al que si gana, además el estadístico R2 está demasiado alto, por lo uqe aunque hay mejores modelos, con este también se podrá llegar a un buen ajuste de los datos.
+
+[acá]
+
+
+Teniendo que el modelo se hará con el random forest regressor, se ajustan los parámetros y se escogen los parámetros que mejor ajustan el modelo (mejor basado en métricas).
 
 
 
@@ -74,3 +86,13 @@ teniendo que el modelo se hará con el random forest regressor, se ajustan los p
   - https://pycaret.gitbook.io/docs/learn-pycaret/official-blog/announcing-pycaret-1.0#9.-predict-model
   - https://www.runt.com.co/node/2892
   - https://pycaret.gitbook.io/docs/get-started/quickstart#setup
+
+Métricas de desempeño.
+  - https://support.numxl.com/hc/es/articles/215969423-MAE-Error-medio-absoluto
+  - https://aprendeia.com/evaluando-el-error-en-los-modelos-de-regresion/
+  - https://www.gestiondeoperaciones.net/proyeccion-de-demanda/error-porcentual-absoluto-medio-mape-en-un-pronostico-de-demanda/
+
+Modelos 
+- https://en.wikipedia.org/wiki/LightGBM
+- https://blog.paperspace.com/implementing-gradient-boosting-regression-python/
+- https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html
