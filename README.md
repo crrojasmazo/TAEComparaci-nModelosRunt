@@ -52,18 +52,20 @@ La función setup lo que hace es iniciar un ambiente de entranamiento y crea un 
 
 ![Image_text](https://github.com/crrojasmazo/TAEComparaci-nModelosRunt/blob/main/2%20TAE.png)
 
-Aunque se puede ver que el modelo sugerido por la tabla es el lightgbm, para el desarrollo del trabajo se escogió el modelo rf osea, Random Forest Regressor, esto por que vimos los parámetros.
+Aunque se puede ver que el modelo sugerido por la tabla es el lightgbm, para el desarrollo del trabajo se escogió el modelo rf osea, Random Forest Regressor, esto por el siguiente análisis de las métricas de desempeño de cada modelo.
 
-* MAE: error absoluto medio, a mayor número es peor el modelo.
-* MSE: error cuadrático medio, a mayor número es peor el modelo.
-* RMSE: raiz del error cuadrático medio, a mayor número peor es el modelo.
-* R2: 0 indica que no sirve, 1 es el modelo perfecto.
-* RMSLE: raiz del error cuadrático logarítmico medio. 
+Que significa cada métrica dada.
+* MAE: error absoluto medio, mientras más alejado de cero (0) sea el número el modelo hará peores ajustes.
+* MSE: error cuadrático medio, mientras más alejado de cero (0) sea el número el modelo hará peores ajustes.
+* RMSE: raiz del error cuadrático medio, mientras más alejado de cero (0) sea el número el modelo hará peores ajustes.
+* R2: 0 indica que el modelo no sirve mientras 1 indica que es el modelo perfecto.
+* RMSLE: raiz del error cuadrático logarítmico medio, mientras más alejado de cero (0) sea el número el modelo hará peores ajustes. 
 * MAPE: Error Porcentual Absoluto Medio. Mide el tamaño del error en términos porcentuales.
 
-Nuestro modelo escogido (Random forest) gana el el MAE y en el MAPE, además en los que no gana tiene una diferencia mínima con respecto al que si gana, además el estadístico R2 está demasiado alto, por lo uqe aunque hay mejores modelos, con este también se podrá llegar a un buen ajuste de los datos.
+Nuestro modelo escogido (Random forest) gana el el MAE y en el MAPE, además en los que no gana tiene una diferencia mínima con respecto al que si gana.
+Para el caso particular del R2 fuimos más allá y llevamos a cabo la ejecución del modelo con rf, el ajuste al modelo se hizo por lotes de datos y uno de ellos dió un R2 de 0.8728 (como se muestra en la tabla de abajo), que es incluso mayor al R2 de los dos modelos que suspuestamente le ganna en esta métrica (se recuerda además que los parámetros para el modelo RF se calculan con base a ese lote que tuvo mejor R2), por lo que ahora con más seguridad trabajremos con este modelo.
 
-[acá]
+![image_text](https://github.com/crrojasmazo/TAEComparaci-nModelosRunt/blob/main/imagen_2022-07-01_173728009.png)
 
 
 Teniendo que el modelo se hará con el random forest regressor, se ajustan los parámetros y se escogen los parámetros que mejor ajustan el modelo (mejor basado en métricas).
@@ -79,6 +81,7 @@ Teniendo que el modelo se hará con el random forest regressor, se ajustan los p
 
 
 
+# Conclusiones.
 
 
 ## Cibergrafía
