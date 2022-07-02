@@ -31,11 +31,11 @@
 
 ![Image text](https://github.com/crrojasmazo/TAEComparaci-nModelosRunt/blob/main/imagen_2022-07-01_134950043.png)
 
-En esta solo de dan los datos de la fecha y las unidades. Se entienden las unidades como la cantidad de automóviles a los cuales se les sacó RUNT por lo que se puede decir que son vehículos recien vendidos, por lo que se puede entrar a analizar los movimientos de las ventas de los carros, sin embargo, tenemos un problema y es la falta de variables para poder plantear cualquier modelo, por lo que basados en la fecha optamos por sacar estas variables.
-* NonBussinessDay: 
-* Day: 
-* Dayweek:
-* Month:
+En esta solo de dan los datos de la fecha y las unidades. Se entienden las unidades como la cantidad de automóviles a los cuales se les sacó RUNT en la respectiva fecha por lo que se puede decir que son vehículos recien vendidos, con esto se puede entrar a analizar los movimientos de las ventas de los carros, sin embargo, tenemos un problema y es la falta de variables para poder plantear cualquier modelo, por lo que basados en la fecha optamos por sacar las siguientes variables.
+* NonBussinessDay: Ayudados de una base de datos extra que nos dice que días son sábados, domingos y festivos en Colombia se hizo una variable indicadora (0 o 1) la cual es 0 si la fecha corresponde a un día de seamana y 1 si corresponde a un día del fin de semana o festivo, los cuales son días no laborales normalmente.
+* Day: El número del día sacado de la fecha.
+* Dayweek: Dice el día (entre monday y sunday) al que corresponde el día (eso sirve para los NonBussinessDay)
+* Month: El número del mes 
 * Year:
 * Holidays:
 
